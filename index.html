@@ -13,6 +13,13 @@
         margin-right: auto;
       }
     </style>
+        <script defer>
+          function toggleImage() {
+            const myImage = document.querySelector('.center');
+            const display = myImage.style.display === 'none'? 'block': 'none';
+            myImage.style.display = display;
+          }
+        </script>
   </head>
   <body>
     <div class="container">
@@ -22,11 +29,13 @@
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque ducimus
         ut odio modi enim vel non quaerat! Quidem quasi ab, sit, laboriosam
         officiis delectus facilis qui sequi repellat quibusdam magnam.
+        <button onclick="toggleImage()">Show/Hide image</button>
         <img src="https://th.bing.com/th/id/OIP.1GsUsQw5KSrgVNyJPkFNngHaEo?pid=ImgDet&rs=1" alt="" srcset="" class="center">
       </main>
     </div>
     <footer>
       Here is the footer.
     </footer>
+
   </body>
 </html>
