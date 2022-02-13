@@ -1,13 +1,9 @@
-import React from 'react'
+import React from 'react';
+import toggleImage from '../functions';
 
 export default function Home() {
-function toggleImage() {
-    const myImage = document.querySelector('.center');
-    const display = myImage.style.display === 'none'? 'block': 'none';
-    myImage.style.display = display;
-    }
   return (
-    <div class="container">
+    <div className="container">
       <header>Simple Header</header>
       <h1>Hello world!</h1>
       <main>
@@ -16,12 +12,12 @@ function toggleImage() {
         ut odio modi enim vel non quaerat! Quidem quasi ab, sit, laboriosam
         officiis delectus facilis qui sequi repellat quibusdam magnam.
         </p>
-        <button onClick={toggleImage}>Show/Hide image</button>
-        <img src="https://th.bing.com/th/id/OIP.1GsUsQw5KSrgVNyJPkFNngHaEo?pid=ImgDet&amp;rs=1" alt="" srcset="" className="center"></img>
+        <button onClick={toggleImage} data-testid="button">Show/Hide image</button>
+        <img src="https://th.bing.com/th/id/OIP.1GsUsQw5KSrgVNyJPkFNngHaEo?pid=ImgDet&amp;rs=1" alt="" className="center" role="img" style={{display: 'block'}}></img>
       </main>
       <footer>
-      Here is the footer.
-    </footer>
+        Here is the footer.
+      </footer>
     </div>
   )
 }
